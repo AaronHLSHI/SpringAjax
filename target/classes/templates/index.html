@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head lang="en">
+<meta charset="UTF-8" />
+<title></title>
+<link rel="stylesheet" type="text/css"
+	th:href="@{/css/bootstrap.min.css}" />
+</head>
+<body ms-controller="viewmodel">
+	<h1 th:text="${msg}">登录页面</h1>
+	<!-- <div style="margin-top: 1%; margin-left: 10px">
+		<label class="cusorHvr" id="oriEmail"
+			style="color: #06C; margin-bottom: 2%">邮箱：</label> <input
+			class="textbox" type="text" id="emailIn" placeholder="请输入邮箱账号"
+			size="10"
+			data-options="width:'100',panelWidth:'100',panelHeight:'100'"
+			style="width: 120px" /></div> -->
+	<!-- <div style="margin-top: 1%; margin-left: 10px">
+		<label	class="cusorHvr" id="oriPassword"
+			style="color: #06C; margin-bottom: 2%">短信验证码：</label> 
+			<input	class="textbox" type="text" id="codeIn" placeholder="请输入短信验证码"
+			size="10"
+			data-options="width:'100',panelWidth:'100',panelHeight:'100'"
+			style="width: 120px" /> 
+			<button type="button" class="btn btn-primary" style="margin: 10px;" ms-click="@request">{{@text}}</button>
+	</div> -->
+
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label for="inputEmail3" class="col-sm-2 control-label">请输入邮箱账号</label>
+			<div class="col-sm-4">
+				<div style="float: left;">
+					<input id="phonum" type="text" class="form-control"
+						style="width: 300px;" />
+				</div>
+
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label class="col-sm-2 control-label">验证码</label>
+			<div class="col-sm-4">
+				<div style="float: left;">
+					<input style="width: 300px;" class="form-control" id="codename" />
+					<span id="codenameTip"></span>
+				</div>
+				<div style="float: right;">
+					<input class="btn btn-info" type="button" id="getcode"
+						value="点击获取验证码" /> <span id="telephonenameTip"></span>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<div class="col-sm-offset-2 col-sm-6">
+				<button type="button" id="submit" class="btn btn-primary">立即注册</button>
+			</div>
+		</div>
+	</form>
+</body>
+<script th:src="@{/js/jquery-2.1.1.min.js}"></script>
+<script th:src="@{/js/avalon.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/myscript.js}"></script>
+</html>
